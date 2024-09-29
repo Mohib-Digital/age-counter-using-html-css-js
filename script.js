@@ -8,9 +8,9 @@ const calculateBtn = document.getElementById('CalculateBtn');
 calculateBtn.addEventListener('click', () => {
 
   // git display box
-  const box1 = document.getElementById('box1')
-  const box2 = document.getElementById('box2')
-  const box3 = document.getElementById('box3')
+  const box1 = document.getElementById('numValue1')
+  const box2 = document.getElementById('numValue2')
+  const box3 = document.getElementById('numValue3')
 
   // git birthday value
   const birthday = date.value;
@@ -23,16 +23,16 @@ calculateBtn.addEventListener('click', () => {
 
   // create new date Object
   const birthdayDate = new Date(birthday)
-  // console.log(birthdayDate)
+
 
   // current date 
   const curretDate = new Date();
-  // console.log(curretDate)
+
 
   // birthday details
   const yearOfBirthday = birthdayDate.getFullYear();
   const monthOfBirthday = birthdayDate.getMonth() + 1;
-  const dayOfBirthday = birthdayDate.getDay();
+  const dayOfBirthday = birthdayDate.getDate();
 
   // currentDate date details
   const yearOfCurrentDate = curretDate.getFullYear();
@@ -45,11 +45,20 @@ calculateBtn.addEventListener('click', () => {
   let ageMonths = monthOfCurrentDate - monthOfBirthday;
   let ageDays = dayOfCurrentDate - dayOfBirthday;
 
-
   
+  // Adjust days and months if current date is before birthday date in the year
+  if (ageDays < 0) {
+    ageMonths--;
+    ageDays += 30; // Adjust days (approximation)
+  }
 
+  if (ageMonths < 0) {
+    ageYears--;
+    ageMonths += 12; // Adjust months
+  }
 
-
-
-
+  // Displaying values in boxes
+  box1.textContent = `${ageYears}`;
+  box2.textContent = `${ageMonths}`;
+  box3.textContent = `${ageDays}`;
 });
