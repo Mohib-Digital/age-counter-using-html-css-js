@@ -41,19 +41,18 @@ calculateBtn.addEventListener('click', () => {
 
 
   // calculate age
-  let ageYears = yearOfCurrentDate - yearOfBirthday;
-  let ageMonths = monthOfCurrentDate - monthOfBirthday;
-  let ageDays = dayOfCurrentDate - dayOfBirthday;
+  // Exeample: 10/ 30/ 2003
+  let ageYears = yearOfCurrentDate - yearOfBirthday; // 21
+  let ageMonths = monthOfCurrentDate - monthOfBirthday; // -1
+  let ageDays = dayOfCurrentDate - dayOfBirthday; // -1
 
-  
+
   // Adjust days and months if current date is before birthday date in the year
   if (ageDays < 0) {
-    ageMonths--;
     ageDays += 30; // Adjust days (approximation)
   }
 
   if (ageMonths < 0) {
-    ageYears--;
     ageMonths += 12; // Adjust months
   }
 
