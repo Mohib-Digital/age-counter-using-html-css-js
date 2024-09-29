@@ -4,6 +4,7 @@ const calculateBtn = document.getElementById('CalculateBtn');
 // console.log(date)
 // console.log(CalculateBtn)
 
+
 calculateBtn.addEventListener('click', () => {
 
   // git display box
@@ -15,6 +16,11 @@ calculateBtn.addEventListener('click', () => {
   const birthday = date.value;
   // console.log(birthday);
 
+  if(!birthday) {
+    alert('Please select a date');
+    return;
+  };
+
   // create new date Object
   const birthdayDate = new Date(birthday)
   // console.log(birthdayDate)
@@ -23,21 +29,22 @@ calculateBtn.addEventListener('click', () => {
   const curretDate = new Date();
   // console.log(curretDate)
 
-  // calculate the date between birthday date and current date
-  // birthday
+  // birthday details
   const yearOfBirthday = birthdayDate.getFullYear();
-  const monthOfBirthday = birthdayDate.getMonth();
-  const dateOfBirthday = birthdayDate.getDay();
+  const monthOfBirthday = birthdayDate.getMonth() + 1;
+  const dayOfBirthday = birthdayDate.getDay();
 
-  // currentDate 
+  // currentDate date details
   const yearOfCurrentDate = curretDate.getFullYear();
-  const monthOfCurrentDate = curretDate.getMonth();
+  const monthOfCurrentDate = curretDate.getMonth() + 1;
   const dayOfCurrentDate = curretDate.getDate(); 
 
 
-  // adding values into the boxes
-  const boxOneValue = yearOfBirthday - dayOfCurrentDate;
-  box1.textContent = boxOneValue;
+  // calculate age
+  let ageYears = yearOfCurrentDate - yearOfBirthday;
+  let ageMonths = monthOfCurrentDate - monthOfBirthday;
+  let ageDays = dayOfCurrentDate - dayOfBirthday;
+
 
   
 
