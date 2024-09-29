@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  background-color: #0A6CF1;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.age-counter {
+   width: 50%;
+}
+
+
+.dateBox {
+  background-color: #080808;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+#date {
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: none;
+}
+
+#CalculateBtn {
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: none;
+}
+
