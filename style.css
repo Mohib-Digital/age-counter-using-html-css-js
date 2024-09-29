@@ -17,6 +17,28 @@
    width: 40%;
 }
 
+.titleHeading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-family: tahoma;
+  background-color: rgb(5, 197, 5);
+  border: 2px solid #ccc;
+  margin-bottom: 40px;
+  border-radius: 20px;
+  padding: 15px;
+}
+
+.titleHeading h1 {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+
+
 
 .dateBox {
   background-color: #080808;
@@ -142,14 +164,18 @@
   padding: 10px;
  }
 
-
-
  #CalculateBtn {
   padding: 10px;
   width: 100px;
   font-size: 14px;
  }
 
+}
+
+@media (max-width: 400px) {
+  .titleHeading h1 {
+    font-size: 25px;
+  }
 }
 
 
