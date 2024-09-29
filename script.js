@@ -23,6 +23,24 @@ calculateBtn.addEventListener('click', () => {
   const curretDate = new Date();
   // console.log(curretDate)
 
+  // calculate the date between birthday date and current date
+  // birthday
+  const yearOfBirthday = birthdayDate.getFullYear();
+  const monthOfBirthday = birthdayDate.getMonth();
+  const dateOfBirthday = birthdayDate.getDay();
+
+  // currentDate 
+  const yearOfCurrentDate = curretDate.getFullYear();
+  const monthOfCurrentDate = curretDate.getMonth();
+  const dayOfCurrentDate = curretDate.getDate(); 
+
+
+  // adding values into the boxes
+  const boxOneValue = yearOfBirthday - dayOfCurrentDate;
+  box1.textContent = boxOneValue;
+
+  
+
 
 
 
