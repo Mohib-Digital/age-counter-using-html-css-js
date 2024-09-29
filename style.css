@@ -5,7 +5,7 @@
 }
 
 .container {
-  background-color: #0A6CF1;
+  background-color: #6e7175;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -98,7 +98,11 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  transition: all ease 0.5s;
+}
 
+.box:hover {
+  transform: scale(1.1);
 }
 
 #engName {
